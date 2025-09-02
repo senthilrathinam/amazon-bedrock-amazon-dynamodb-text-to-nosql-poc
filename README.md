@@ -58,7 +58,7 @@ When a user interacts with the POC, the flow is as follows:
 2. Clone the repository to your local machine.
 
     ```bash
-    git clone <repository-url>
+	git clone https://github.com/aws-samples/amazon-bedrock-amazon-dynamodb-text-to-nosql-poc.git
     
     ```
     
