@@ -79,7 +79,7 @@ When a user interacts with the POC, the flow is as follows:
 
 3. Open the repository in your favorite code editor. In the terminal, navigate to the POC's folder:
     ```bash
-    cd amazon-bedrock-amazon-dynamodb-text-to-sql-poc
+    cd amazon-bedrock-amazon-dynamodb-text-to-nosql-poc
     ```
 
 4. Configure the Python virtual environment, activate it:
