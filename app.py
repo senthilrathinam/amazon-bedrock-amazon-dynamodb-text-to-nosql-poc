@@ -466,9 +466,9 @@ def main():
                         # Show query optimization rationale
                         if query_dict.get("explanation"):
                             if query_dict.get("use_partiql"):
-                                st.success(f"🔍 **PartiQL Selected**: {query_dict["explanation"]}")
+                                st.success(f"🔍 **PartiQL Selected**: {query_dict['explanation']}")
                             else:
-                                st.info(f"⚡ **Native DynamoDB Selected**: {query_dict["explanation"]}")
+                                st.info(f"⚡ **Native DynamoDB Selected**: {query_dict['explanation']}")
                         
                         # Show the actual query/operation
                         if query_dict.get("partiql_statement"):
@@ -476,14 +476,14 @@ def main():
                             st.code(query_dict["partiql_statement"], language="sql")
                         elif query_dict.get("operation") == "scan":
                             st.markdown("**DynamoDB Operation:**")
-                            st.code(f"table.scan() on {query_dict.get("table_name", "unknown")}", language="python")
+                            st.code(f"table.scan() on {query_dict.get('table_name', 'unknown')}", language="python")
                         
                         # Show full query configuration
                         st.json(query_dict)
                 # Display results if available
                 if "query_results" in result and result["query_results"]:
                     results_data = result["query_results"]
-                    st.write(f"Query executed in {result.get("execution_time", 0):.2f} seconds, returned {len(results_data)} rows")
+                    st.write(f"Query executed in {result.get('execution_time', 0):.2f} seconds, returned {len(results_data)} rows")
                     
                     with st.expander("Query Results", expanded=True):
                         if len(results_data) > 0:
