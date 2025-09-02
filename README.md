@@ -58,7 +58,7 @@ When a user interacts with the POC, the flow is as follows:
 2. Clone the repository to your local machine.
 
     ```bash
-	git clone https://github.com/aws-samples/amazon-bedrock-amazon-dynamodb-text-to-nosql-poc.git
+    git clone https://github.com/aws-samples/amazon-bedrock-amazon-dynamodb-text-to-nosql-poc.git
     
     ```
     
@@ -93,20 +93,13 @@ When a user interacts with the POC, the flow is as follows:
     pip install -r requirements.txt
     ```
 
-6. Open the `.env` file and replace the placeholders with your actual AWS credentials:
+6. Create a .env file in the POC root folder and configure it with your AWS credentials.:
 
     ```bash
     # AWS Configuration (Required)
     AWS_REGION=us-east-1
     AWS_ACCESS_KEY_ID=your_access_key_here
     AWS_SECRET_ACCESS_KEY=your_secret_key_here
-
-    # DynamoDB Configuration (Optional - uses defaults if not specified)
-    DYNAMODB_TABLE_PREFIX=northwind_
-    SALES_TABLE_NAME=sales_transactions
-
-    # Bedrock Configuration (Optional)
-    BEDROCK_MODEL_ID=anthropic.claude-3-sonnet-20240229-v1:0
     ```
 
 8. If you are running this POC application from an Amazon EC2 instance, follow the below steps to configure the Security Group. This allows you to view the streamlit application from your local laptop. 
